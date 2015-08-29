@@ -196,12 +196,20 @@ public class CircularProgress extends View {
         return min;
     }
 
+    /**
+     * Set minimum value of progress in integer
+     * @param min
+     */
     public void setMin(int min) {
         this.min = min;
         invalidate();
         requestLayout();
     }
 
+    /**
+     * Get maximum value of progress
+     * @return max value of progress in integer
+     */
     public int getMax() {
         return max;
     }
@@ -222,6 +230,10 @@ public class CircularProgress extends View {
         requestLayout();
     }
 
+    /**
+     * get color of background circle in progress bar
+     * @return the background circle color of progress
+     */
     public int getBackgroundColor() {
         return this.backgroundColor;
     }
@@ -261,10 +273,12 @@ public class CircularProgress extends View {
             backgroundColor = typedArray.getColor(R.styleable.CircularProgress_backgroundColor, backgroundColor);
             sweepSpeed = typedArray.getFloat(R.styleable.CircularProgress_sweepSpeed, sweepSpeed);
         } finally {
+            // recycle typed array
             typedArray.recycle();
         }
 
         if(colorIds != 0) {
+            // getting the colors to be animated during progress
             colors = getContext().getResources().getIntArray(colorIds);
         }
 
@@ -289,23 +303,28 @@ public class CircularProgress extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        // Draw the background circle below progress bar
         canvas.drawOval(rectB, backgroundPaint);
         int xPos = (canvas.getWidth() / 2);
         int yPos = (int) ((canvas.getHeight() / 2) - ((textPaint.descent() + textPaint.ascent()) / 2));
+        // draw text inside progress bar
         canvas.drawText(text, xPos, yPos, textPaint);
         float angle = 360 * progress / max;
+
+        // draw the progress
         canvas.drawArc(rectF, startAngle, angle, false, foregroundPaint);
 
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-
         final int height = getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec);
         final int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
         final int min = Math.min(width, height);
         setMeasuredDimension(min, min);
+        // rectangle for the background circle
         rectB.set(0 + backgroundStrokeWidth / 2, 0 + backgroundStrokeWidth / 2, min - backgroundStrokeWidth / 2, min - backgroundStrokeWidth / 2);
+        // rectangle for progress bar
         rectF.set(0 + foregroundStrokeWidth / 2, 0 + foregroundStrokeWidth / 2, min - foregroundStrokeWidth / 2, min - foregroundStrokeWidth / 2);
     }
 
