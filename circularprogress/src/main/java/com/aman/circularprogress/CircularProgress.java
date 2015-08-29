@@ -141,6 +141,10 @@ public class CircularProgress extends View {
         requestLayout();
     }
 
+    /**
+     * Set width of the text. it will automatically invalidate and redraw the view
+     * @param strokeWidth is the width of the text
+     */
     public void setTextStrokeWidth(int strokeWidth) {
         this.textSize = strokeWidth;
         this.textPaint.setTextSize(strokeWidth);
@@ -148,6 +152,11 @@ public class CircularProgress extends View {
         requestLayout();
     }
 
+    /**
+     *
+     * Set color of the text. it will automatically invalidate and redraw the view
+     * @param color is the the color of the text to set
+     */
     public void setTextColor(int color) {
         this.textColor = color;
         this.textPaint.setColor(textColor);
@@ -155,32 +164,63 @@ public class CircularProgress extends View {
         requestLayout();
     }
 
+    /**
+     * Set the progress text. Automatically invalidate and redraws text.
+     * @param text is the string to set as text.
+     */
     public void setText(String text) {
         this.text = text;
         invalidate();
         requestLayout();
     }
 
+    /**
+     * The floating point value to set as progress.
+     * Precision of floating point is set to 1 digit
+     * @param text is the text to set
+     */
     public void setText(float text) {
         setText(String.format(Locale.getDefault(), "%.1f", text));
     }
 
+    /**
+     * Set a string resource to text
+     * @param id is the id of string resource
+     */
     public void setText(int id) {
         setText(getContext().getString(id));
     }
 
+    /**
+     * @return the text of progress
+     */
     public String getText() {
         return this.text;
     }
 
+    /**
+     *
+     * @return the text color in integer.
+     */
     public int getTextColor() {
         return this.textColor;
     }
 
+    /**
+     * @return the progress of progress bar
+     */
     public float getProgress() {
         return progress;
     }
 
+    /**
+     * Function to set progress of progress bar without animation
+     *
+     * This is automatically called by the animation interpolator
+     * from function {@link CircularProgress#setProgressWithAnimation(float)}
+     *
+     * @param progress to set without animation
+     */
     public void setProgress(float progress) {
         this.progress = progress;
 
@@ -192,13 +232,16 @@ public class CircularProgress extends View {
         }
     }
 
+    /**
+     * @return minimum value of progress
+     */
     public int getMin() {
         return min;
     }
 
     /**
      * Set minimum value of progress in integer
-     * @param min
+     * @param min is the min value of progress to set
      */
     public void setMin(int min) {
         this.min = min;
@@ -250,6 +293,12 @@ public class CircularProgress extends View {
         init(context, attrs);
     }
 
+    /**
+     *
+     * Initialize progress bar
+     * @param context is the context
+     * @param attrs are the xml attributes set
+     */
     private void init(Context context, AttributeSet attrs) {
         rectF = new RectF();
         rectB = new RectF();
