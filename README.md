@@ -1,2 +1,2 @@
-# Cirular-Progress
-A determinant circular progress bar which changes color with animation
+# CircularProgress
+A custom view for android for determinant circular progress which changes color with animation.
