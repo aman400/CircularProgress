@@ -16,7 +16,7 @@ Usage:
            android:id="@+id/progress"
            android:layout_width="40dp"
            android:layout_height="40dp"
-           app:backgroundColor="@color/grey"
+           app:backgroundColor="#CCCCCC"
            app:backgroundStroke="0.5dp"
            app:colors="@array/progress_colors"
            app:foregroundStroke="2dp"
@@ -39,3 +39,40 @@ Usage:
 
       this method will animate the progress to the given value.
 
+
+Explanation
+============
+
+   `app:backgroundColor` : specifies the color for the circle in the background. You need to pass a color attriute to this.
+   
+   `app:backgroundStroke` : It is the width of the background circle. And it is defined in dps
+   
+   `app:colors` : It is the list of array of colors to be animated during the progress. you need to define an array of color in the color file like this:
+      <array name="progress_colors">
+        <item>#EE0909</item>
+        <item>#EE5709</item>
+        <item>#EE9709</item>
+        <item>#EED009</item>
+        <item>#BCEE09</item>
+        <item>#82B905</item>
+        <item>#328300</item>
+      </array>
+      
+   `app:foregroundStroke` : It is the width of the forground progress circle which will animate. And it is defined in dps.
+   
+   `app:max` : It is the maximum progress of circular progress bar. You need to pass a float value and it should be greater than the min value.
+   
+   `app:min` : It is the minimum progress of circular progress bar. You need to pass a float value lesser than the max value.
+   
+   `app:progress` : This is to set the initial value of progress bar. You can pass a float value between min and max
+   
+   `app:progressBarColor` : This is to set the color of the progress. if you do not pass the `app:colors` any value
+   
+   `app:sweepSpeed` : This is speed with which the progress bar animates. Incresing its value will increase the animation time.
+   
+   `app:text` : This is displayed inside the progress bar as it progresses.
+   
+   `app:textColor` : This is the color of the text displayed inside progress bar.
+   
+   `app:textSize` : Size of the text inside progress bar, set it carefully so that it does not overlap the progress circle.
+   
