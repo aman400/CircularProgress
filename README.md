@@ -31,11 +31,11 @@ Usage:
 
    2. In the `onCreate` method of your activity (`onCreateView` for fragment) you can get this view
 
-       CircularProgress progress = (CircularProgress) findViewById(R.id.progress) 
+         CircularProgress progress = (CircularProgress) findViewById(R.id.progress) 
 
    3. To animate the progress you can use following method
     
-       progress.setProgressWithAnimation(5);
+         progress.setProgressWithAnimation(5);
 
-       this method will animate the progress to the given value.
+      this method will animate the progress to the given value.
 
