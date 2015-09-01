@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                progress.setProgressWithAnimation(95);
+                progress.setProgressWithAnimation(5);
             }
         }, 2000);
     }

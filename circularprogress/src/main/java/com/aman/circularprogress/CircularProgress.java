@@ -222,6 +222,13 @@ public class CircularProgress extends View {
      * @param progress to set without animation
      */
     public void setProgress(float progress) {
+
+        if(progress > this.max)
+            throw new IllegalArgumentException("Progress cannot be greater than maximum progress value which is " + this.max);
+
+        if(progress < this.min)
+            throw new IllegalArgumentException("Progress cannot be less that minimum progress value which is " + this.min);
+
         this.progress = progress;
 
         if(colors != null && colors.length > 0) {
@@ -419,6 +426,13 @@ public class CircularProgress extends View {
      * @param progress The progress it should animate to it.
      */
     public void setProgressWithAnimation(float progress) {
+
+        if(progress > this.max)
+            throw new IllegalArgumentException("Progress cannot be greater than maximum progress value which is " + this.max);
+
+        if(progress < this.min)
+            throw new IllegalArgumentException("Progress cannot be less that minimum progress value which is " + this.min);
+
         ArrayList<Integer> foregroundColors;
         if(colors != null && colors.length > 0) {
             float divisions = (float)(max - min) / (float)colors.length;
