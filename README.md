@@ -69,7 +69,8 @@ Explanation
    
    `app:progress` : This is to set the initial value of progress bar. You can pass a float value between min and max
    
-   `app:progressBarColor` : This is to set the color of the progress. if you do not pass any value `app:colors` you can set the color of progress bar and otherwise a default color will be set.
+   `app:progressBarColor` : This is to set the color of the progress. if you do not pass any value
+   to `app:colors`. you can set the color of progress bar and otherwise a default color will be set.
    
    `app:sweepSpeed` : This is speed with which the progress bar animates. Increasing its value will increase the animation time.
    
