@@ -22,7 +22,7 @@
         app:min="0"
         app:progress="0"
         app:progressbarColor="@color/black"
-        app:sweepSpeed="2.0"
+        app:sweepSpeed="3.0"
         app:text="0.0"
         app:textColor="@color/black"
         app:textSize="12sp"/>

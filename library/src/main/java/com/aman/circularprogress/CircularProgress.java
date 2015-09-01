@@ -251,6 +251,8 @@ public class CircularProgress extends View {
      * @param min is the min value of progress to set
      */
     public void setMin(int min) {
+        if(min >= max)
+            throw new IllegalArgumentException("min value must be smaller than max value");
         this.min = min;
         invalidate();
         requestLayout();
@@ -265,6 +267,8 @@ public class CircularProgress extends View {
     }
 
     public void setMax(int max) {
+        if(max <= min)
+            throw new IllegalArgumentException("max value should be greater than min value");
         this.max = max;
         invalidate();
     }
@@ -328,6 +332,9 @@ public class CircularProgress extends View {
             textSize = typedArray.getDimensionPixelSize(R.styleable.CircularProgress_textSize, textSize);
             backgroundColor = typedArray.getColor(R.styleable.CircularProgress_backgroundColor, backgroundColor);
             sweepSpeed = typedArray.getFloat(R.styleable.CircularProgress_sweepSpeed, sweepSpeed);
+
+            if(max <= min)
+                throw new IllegalArgumentException("max value should be greater than min value");
         } finally {
             // recycle typed array
             typedArray.recycle();
