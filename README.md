@@ -48,15 +48,16 @@ Explanation
    `app:backgroundStroke` : It is the width of the background circle. And it is defined in dps
    
    `app:colors` : It is the list of array of colors to be animated during the progress. you need to define an array of color in the color file like this:
-      <array name="progress_colors">
-        <item>#EE0909</item>
-        <item>#EE5709</item>
-        <item>#EE9709</item>
-        <item>#EED009</item>
-        <item>#BCEE09</item>
-        <item>#82B905</item>
-        <item>#328300</item>
-      </array>
+
+          <array name="progress_colors">
+            <item>#EE0909</item>
+            <item>#EE5709</item>
+            <item>#EE9709</item>
+            <item>#EED009</item>
+            <item>#BCEE09</item>
+            <item>#82B905</item>
+            <item>#328300</item>
+          </array>
       
    `app:foregroundStroke` : It is the width of the foreground progress circle which will animate. And it is defined in dps.
    
