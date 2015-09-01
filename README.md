@@ -58,7 +58,7 @@ Explanation
         <item>#328300</item>
       </array>
       
-   `app:foregroundStroke` : It is the width of the forground progress circle which will animate. And it is defined in dps.
+   `app:foregroundStroke` : It is the width of the foreground progress circle which will animate. And it is defined in dps.
    
    `app:max` : It is the maximum progress of circular progress bar. You need to pass a float value and it should be greater than the min value.
    
@@ -68,7 +68,7 @@ Explanation
    
    `app:progressBarColor` : This is to set the color of the progress. if you do not pass any value `app:colors` you can set the color of progress bar and otherwise a default color will be set.
    
-   `app:sweepSpeed` : This is speed with which the progress bar animates. Incresing its value will increase the animation time.
+   `app:sweepSpeed` : This is speed with which the progress bar animates. Increasing its value will increase the animation time.
    
    `app:text` : This is displayed inside the progress bar as it progresses.
    
