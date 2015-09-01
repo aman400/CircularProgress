@@ -43,7 +43,7 @@ Usage:
 Explanation
 ============
 
-   `app:backgroundColor` : specifies the color for the circle in the background. You need to pass a color attriute to this.
+   `app:backgroundColor` : specifies the color for the circle in the background. You need to pass a color attrbiute to this.
    
    `app:backgroundStroke` : It is the width of the background circle. And it is defined in dps
    
@@ -66,7 +66,7 @@ Explanation
    
    `app:progress` : This is to set the initial value of progress bar. You can pass a float value between min and max
    
-   `app:progressBarColor` : This is to set the color of the progress. if you do not pass the `app:colors` any value
+   `app:progressBarColor` : This is to set the color of the progress. if you do not pass any value `app:colors` you can set the color of progress bar and otherwise a default color will be set.
    
    `app:sweepSpeed` : This is speed with which the progress bar animates. Incresing its value will increase the animation time.
    
