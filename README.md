@@ -43,11 +43,11 @@ Usage:
 Explanation
 ============
 
-   `app:backgroundColor` : specifies the color for the circle in the background. You need to pass a color attrbiute to this.
+   `app:backgroundColor` : specifies the color for the circle in the background. You need to pass a color attribute to this.
    
    `app:backgroundStroke` : It is the width of the background circle. And it is defined in dps
    
-   `app:colors` : It is the list of array of colors to be animated during the progress. you need to define an array of color in the color file like this:
+   `app:colors` : It is the list of array of colors to be animated during the progress. you need to define an array of colors in the color file like this:
 
           <array name="progress_colors">
             <item>#EE0909</item>
@@ -58,6 +58,8 @@ Explanation
             <item>#82B905</item>
             <item>#328300</item>
           </array>
+
+    and pass this array of colors to the `app:colors="@array/progress_colors"`
       
    `app:foregroundStroke` : It is the width of the foreground progress circle which will animate. And it is defined in dps.
    
