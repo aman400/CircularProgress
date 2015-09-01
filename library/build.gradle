@@ -24,7 +24,7 @@ android {
 
 def siteUrl = 'https://github.com/aman400/CircularProgress'      // Homepage URL of the library
 def gitUrl = 'https://github.com/aman400/CircularProgress.git'   // Git repository URL
-group = "com.github.aman.rating"
+group = "com.github.aman400"
 
 install {
     repositories.mavenInstaller {
