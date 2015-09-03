@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-version = "1.0.1"
+version = "1.0.3"
 
 android {
     compileSdkVersion 23
@@ -35,6 +35,7 @@ install {
 
                 // Add your description here
                 name 'CircularProgress'
+                description 'A custom view for determinant circular progress which changes color with animation.'
                 url siteUrl
 
                 // Set your license

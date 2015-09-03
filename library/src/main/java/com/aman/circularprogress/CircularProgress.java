@@ -27,7 +27,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.animation.DecelerateInterpolator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -457,7 +457,7 @@ public class CircularProgress extends View {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setDuration((long)sweepSpeed * SPEED);
-        animatorSet.setInterpolator(new DecelerateInterpolator());
+        animatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
         animatorSet.playTogether(
                 ObjectAnimator.ofFloat(this, "progress", progress),
                 ObjectAnimator.ofFloat(this, "text", progress),
