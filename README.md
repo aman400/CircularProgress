@@ -6,6 +6,7 @@ CircularProgress
 A custom view for determinant circular progress which changes color with animation.
 
 This library is compatible with android >= 4.0
+You and use Jake Wharton's [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids) library for backward compatibility
 
 Usage:
 =======
