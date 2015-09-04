@@ -80,3 +80,17 @@ Explanation
    
    `app:textSize` : Size of the text inside progress bar, set it carefully so that it does not overlap the progress circle.
    
+Download
+=========
+
+Grab the latest release via Maven:
+
+   <dependency>
+     <groupId>com.github.aman400</groupId>
+     <artifactId>library</artifactId>
+     <version>1.0.4</version>
+   </dependency>
+
+or Gradle:
+   
+   compile 'com.github.aman400:library:1.0.4'
