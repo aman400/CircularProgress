@@ -1,6 +1,8 @@
 CircularProgress
 ===================
 
+[![Maven Central](https://img.shields.io/badge/maven--central-rating-blue.svg?style=plastic)](http://search.maven.org/#search|ga|1|com.github.aman400)
+
 A custom view for determinant circular progress which changes color with animation.
 
 This library is compatible with android >= 4.0
@@ -83,6 +85,8 @@ Explanation
    
 Download
 =========
+
+[![Maven Central](https://img.shields.io/badge/maven--central-v1.0.4-blue.svg?style=plastic)](http://search.maven.org/#search|ga|1|com.github.aman400)
 
 Grab the latest release via Maven:
 
