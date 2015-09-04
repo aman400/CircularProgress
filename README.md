@@ -12,6 +12,7 @@ Usage:
 
    1. Include the widgets in your layout file.
    
+
         <com.aman.circularprogress.CircularProgress
            android:id="@+id/progress"
            android:layout_width="40dp"
@@ -85,12 +86,12 @@ Download
 
 Grab the latest release via Maven:
 
-   <dependency>
-     <groupId>com.github.aman400</groupId>
-     <artifactId>library</artifactId>
-     <version>1.0.4</version>
-   </dependency>
+      <dependency>
+        <groupId>com.github.aman400</groupId>
+        <artifactId>library</artifactId>
+        <version>1.0.4</version>
+      </dependency>
 
 or Gradle:
-   
-   compile 'com.github.aman400:library:1.0.4'
+
+      compile 'com.github.aman400:library:1.0.4'
