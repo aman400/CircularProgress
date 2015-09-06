@@ -376,7 +376,6 @@ public class CircularProgress extends View {
 
         // draw the progress
         canvas.drawArc(rectF, startAngle, angle, false, foregroundPaint);
-
     }
 
     @Override
@@ -389,40 +388,6 @@ public class CircularProgress extends View {
         rectB.set(0 + backgroundStrokeWidth / 2, 0 + backgroundStrokeWidth / 2, min - backgroundStrokeWidth / 2, min - backgroundStrokeWidth / 2);
         // rectangle for progress bar
         rectF.set(0 + foregroundStrokeWidth / 2, 0 + foregroundStrokeWidth / 2, min - foregroundStrokeWidth / 2, min - foregroundStrokeWidth / 2);
-    }
-
-    /**
-     * Lighten the given color by the factor
-     *
-     * @param color  The color to lighten
-     * @param factor 0 to 4
-     * @return A brighter color
-     */
-    public int lightenColor(int color, float factor) {
-        float r = Color.red(color) * factor;
-        float g = Color.green(color) * factor;
-        float b = Color.blue(color) * factor;
-        int ir = Math.min(255, (int) r);
-        int ig = Math.min(255, (int) g);
-        int ib = Math.min(255, (int) b);
-        int ia = Color.alpha(color);
-        return (Color.argb(ia, ir, ig, ib));
-    }
-
-    /**
-     * Transparent the given color by the factor
-     * The more the factor closer to zero the more the color gets transparent
-     *
-     * @param color  The color to transparent
-     * @param factor 1.0f to 0.0f
-     * @return int - A transplanted color
-     */
-    public int adjustAlpha(int color, float factor) {
-        int alpha = Math.round(Color.alpha(color) * factor);
-        int red = Color.red(color);
-        int green = Color.green(color);
-        int blue = Color.blue(color);
-        return Color.argb(alpha, red, green, blue);
     }
 
     /**
